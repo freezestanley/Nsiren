@@ -1,0 +1,8 @@
+version: '2.1'
+
+services:
+  nsiren:
+    image: nsiren
+    build: .
+    ports:
+      - 8081:8081

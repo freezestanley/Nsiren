@@ -1,0 +1,15 @@
+version: '2.1'
+
+services:
+  nsiren:
+    image: nsiren
+    build: .
+    environment:
+      NODE_ENV: development
+    ports:
+      - 8081:8081
+      - 9229:9229
+    volumes:
+      - .:/usr/src/app
+    ## set your startup file here
+    command: node --inspect app.js
