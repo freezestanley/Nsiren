@@ -3,13 +3,14 @@ const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
-var entry = require('../config/entry')
+const vuxLoader = require('vux-loader')
+const entry = require('../config/entry')
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
 
-module.exports = {
+let webpackConfig = {
   entry: entry.entry,
   // {
   //   app: './src/main.js'
@@ -76,3 +77,16 @@ module.exports = {
     ]
   }
 }
+
+
+module.exports = vuxLoader.merge(webpackConfig, {
+  options: {},
+  plugins: [
+    {
+      name: 'vux-ui'
+    },
+    {
+      name: 'duplicate-style'
+    }
+  ]
+})

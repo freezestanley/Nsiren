@@ -8,7 +8,10 @@
 
 <script>
 export default {
-  name: 'app'
+  name: 'app',
+  created: function () {
+    this.$vux.toast.text('hello', 'top')
+  }
 }
 </script>
 

@@ -6,6 +6,11 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import {axioshttp} from '@/widget'
+import Vuex from 'vuex'
+import { ToastPlugin } from 'vux'
+
+Vue.use(Vuex)
+Vue.use(ToastPlugin)
 
 Vue.config.productionTip = false
 

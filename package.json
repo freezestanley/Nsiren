@@ -24,7 +24,8 @@
     "isomorphic-fetch": "^2.2.1",
     "vue": "^2.5.2",
     "vue-axios": "^2.0.2",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
@@ -50,7 +51,7 @@
     "cors": "^2.8.4",
     "cross-env": "^5.1.0",
     "cross-spawn": "^5.0.1",
-    "css-loader": "^0.28.0",
+    "css-loader": "^0.28.7",
     "eslint": "^4.9.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-friendly-formatter": "^3.0.0",
@@ -78,6 +79,7 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-spec-reporter": "0.0.31",
     "karma-webpack": "^2.0.2",
+    "less-loader": "^4.0.5",
     "log4js": "^2.3.7",
     "mocha": "^4.0.1",
     "nightwatch": "^0.9.12",
@@ -100,6 +102,7 @@
     "vue-style-loader": "^3.0.1",
     "vue-template-compiler": "^2.5.2",
     "vux": "^2.6.5",
+    "vux-loader": "^1.1.14-rc.1",
     "webpack": "^3.8.1",
     "webpack-bundle-analyzer": "^2.9.0",
     "webpack-dev-middleware": "^1.12.0",
