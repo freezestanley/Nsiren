@@ -23,6 +23,10 @@ npm run unit
 # run e2e tests
 npm run e2e
 
+# run createEntry
+npm run createEntry target
+require target enter name
+
 # run mdev    run dev & mock
 npm run mdev
 
@@ -49,5 +53,8 @@ src/api
                  true  local 本地json数据
 
 
-                 
+多页多入口
+application
+  |-main
+  |-share               
 

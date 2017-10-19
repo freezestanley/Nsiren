@@ -2,24 +2,25 @@ let HtmlWebpackPlugin = require('html-webpack-plugin')
 let path = require('path')
 let config = require('../config')
 
-let entry = [
-    {
-        "key": "app",
-        "entry": ['babel-polyfill', './src/application/main/main.js'],
-        "filename": "index.html",
-        "template": "index.html",
-        "prdHtmlWebpackPlugin": "../dist/index.html",
-        "chunks": ['manifest','vendor', "app"]
-    },
-    {
-        "key": "share",
-        "entry": ['babel-polyfill', './src/application/share/main.js'],
-        "filename": "share.html",
-        "template": "index.html",
-        "prdHtmlWebpackPlugin": "../dist/share/index.html",
-        "chunks": ['manifest','vendor', "share"]
-    }
-]
+// let entry = [
+//     {
+//         "key": "app",
+//         "entry": ['babel-polyfill', './src/application/main/main.js'],
+//         "filename": "index.html",
+//         "template": "index.html",
+//         "prdHtmlWebpackPlugin": "../dist/index.html",
+//         "chunks": ['manifest','vendor', "app"]
+//     },
+//     {
+//         "key": "share",
+//         "entry": ['babel-polyfill', './src/application/share/main.js'],
+//         "filename": "share.html",
+//         "template": "index.html",
+//         "prdHtmlWebpackPlugin": "../dist/share/index.html",
+//         "chunks": ['manifest','vendor', "share"]
+//     }
+// ]
+let entry = require('./entry.json')
 
 let entryfilter = function (obj) {
     let etr = {}
