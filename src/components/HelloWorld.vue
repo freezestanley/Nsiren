@@ -5,6 +5,7 @@
     <h2>Essential Links</h2>
     <div @click="cross">跨域</div>
     <div @click="local">本地</div>
+    <div @click="language">i18n</div>
   </div>
 </template>
 <script>
@@ -18,7 +19,7 @@ export default {
   },
   methods: {
     cross () {
-      this.axios.post(ILOGIN()).then((response) => {
+      this.axios.post(ILOGIN).then((response) => {
         console.dir(response)
       }).catch((err) => {
         console.log(err)
@@ -26,12 +27,17 @@ export default {
       })
     },
     local () {
-      this.axios.post(ILOGIN(true)).then((response) => {
+      this.axios.post(ILOGIN).then((response) => {
         console.dir(response)
       }).catch((err) => {
         console.log(err)
         throw new Error(err)
       })
+    },
+    language () {
+      console.dir(window.app.i18n)
+      window.app.i18n.locale = window.app.i18n.locale == 'en' ? 'ja' : 'en'
+      console.log('fff')
     }
   }
 }

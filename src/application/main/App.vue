@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <img src="~@/assets/logo.png" style="display:block;">
-    1231231231123123123
+    {{ $t('message.hello', { msg: 'hello' }) }}
     <router-view/>
   </div>
 </template>
