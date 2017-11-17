@@ -1,8 +1,8 @@
 <template>
   <div class="allSort">
-    aa 
-    <div @click="gotoaa">this is aa</div> 
-  </div>
+   bb
+    <div @click="gotoaa">this is bb</div>
+    </div>
 </template>
 
 <script>
@@ -11,7 +11,7 @@ export default {
   name: 'aa',
   methods: {
     gotoaa () {
-      this.$router.push({path: "/aa"})
+      this.$router.push({path: "/bb"})
     }
   },
   data () {

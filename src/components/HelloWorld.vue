@@ -6,6 +6,8 @@
     <div @click="cross">跨域</div>
     <div @click="local">本地</div>
     <div @click="language">i18n</div>
+    <div @click="gotoaa">aa</div>
+    <div @click="gotobb">bb</div>
   </div>
 </template>
 <script>
@@ -38,6 +40,12 @@ export default {
       console.dir(window.app.i18n)
       window.app.i18n.locale = window.app.i18n.locale == 'en' ? 'ja' : 'en'
       console.log('fff')
+    },
+    gotoaa () {
+      this.$router.push({path: "/aa"})
+    },
+    gotobb () {
+      this.$router.push({path: "/bb"})
     }
   }
 }

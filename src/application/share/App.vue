@@ -1,14 +1,21 @@
 <template>
   <div id="app">
+    this is share
     <img src="~@/assets/logo.png" style="display:block;">
     ------------------------------------------
+    <div @click="gotoaa">this is bb</div>
     <router-view/>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'app'
+  name: 'app',
+  methods: {
+    gotoaa () {
+      this.$router.push({path: "/share/bb"})
+    }
+  }
 }
 </script>
 

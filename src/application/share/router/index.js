@@ -2,11 +2,12 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/Hello'
 import aa from '@/components/aa'
+import bb from '@/components/bb'
 
 Vue.use(Router)
 
 export default new Router({
-  // mode: 'history',
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -17,6 +18,11 @@ export default new Router({
       path: '/aa',
       name: 'aa',
       component: aa
+    },
+    {
+      path: '/share/bb',
+      name: 'bb',
+      component: bb
     }
   ]
 })

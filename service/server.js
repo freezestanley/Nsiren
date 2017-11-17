@@ -64,6 +64,9 @@ module.exports = function (app) {
   app.get('/share', function(req, res) {
     res.render('./share/index', { title: '测试11111' })
   })
+  app.get('/share/:id', function(req, res) {
+    res.render('./share/index', { title: '测试11111' })
+  })
   // app.get('/',function(req, res){
   //   res.send('Hello world!')
   // })

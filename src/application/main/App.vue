@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    this is main
     <img src="~@/assets/logo.png" style="display:block;">
     {{ $t('message.hello', { msg: 'hello' }) }}
     <router-view/>

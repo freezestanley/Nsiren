@@ -1,22 +1,50 @@
 <template>
   <div class="hello">
-      111111111111111111{ILOGIN}
+    this is hello
+    <div @click="gotoaa">aa</div>
+    <div @click="gotobb">bb</div>
   </div>
 </template>
-
 <script>
-
+import {ILOGIN} from '@/api'
 export default {
-  name: 'Hello',
+  name: 'HelloWorld',
   data () {
     return {
-      msg: 'ILOGIN(true)',
-      msg1: 'ILOGIN()'
+      msg: 'Welcome to Your Vue.js App'
+    }
+  },
+  methods: {
+    cross () {
+      this.axios.post(ILOGIN).then((response) => {
+        console.dir(response)
+      }).catch((err) => {
+        console.log(err)
+        throw new Error(err)
+      })
+    },
+    local () {
+      this.axios.post(ILOGIN).then((response) => {
+        console.dir(response)
+      }).catch((err) => {
+        console.log(err)
+        throw new Error(err)
+      })
+    },
+    language () {
+      console.dir(window.app.i18n)
+      window.app.i18n.locale = window.app.i18n.locale == 'en' ? 'ja' : 'en'
+      console.log('fff')
+    },
+    gotoaa () {
+      this.$router.push({path: "/aa"})
+    },
+    gotobb () {
+      this.$router.push({path: "/bb"})
     }
   }
 }
 </script>
-
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang='scss' rel="stylesheet/scss"  scoped>
 h1, h2 {
